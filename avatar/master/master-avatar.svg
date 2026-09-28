@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Канонический персонаж</title>
+  <desc id="desc">Векторная реконструкция эталона база.png</desc>
+  <defs>
+    <radialGradient id="skin" cx="34%" cy="28%" r="82%">
+      <stop offset="0" stop-color="#a75440"/>
+      <stop offset="0.55" stop-color="#8d3e2d"/>
+      <stop offset="1" stop-color="#70271d"/>
+    </radialGradient>
+    <linearGradient id="skin-ear" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#984633"/>
+      <stop offset="1" stop-color="#74291f"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0.8" y2="1">
+      <stop stop-color="#292929"/>
+      <stop offset="0.62" stop-color="#202020"/>
+      <stop offset="1" stop-color="#151515"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop stop-color="#3b3f42"/>
+      <stop offset="0.55" stop-color="#303437"/>
+      <stop offset="1" stop-color="#25292c"/>
+    </linearGradient>
+    <linearGradient id="pants" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#323639"/>
+      <stop offset="1" stop-color="#222528"/>
+    </linearGradient>
+    <linearGradient id="shoe" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#26282a"/>
+      <stop offset="1" stop-color="#080909"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+    <filter id="small-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <g id="legs" data-layer="legs" filter="url(#soft-shadow)">
+    <!-- Each trouser leg and its boot share one continuous silhouette. -->
+    <path d="M374 730H487V886Q487 897 476 897H376Q365 897 368 885L375 846Z" fill="url(#pants)"/>
+    <path d="M513 730H626L625 846L632 885Q635 897 624 897H524Q513 897 513 886Z" fill="url(#pants)"/>
+    <!-- Boot shading is painted inside the leg silhouettes, with no detached edge. -->
+    <path d="M375 865Q392 839 426 839Q464 839 487 867V886Q487 897 476 897H376Q365 897 368 885Z" fill="url(#shoe)"/>
+    <path d="M513 867Q536 839 574 839Q608 839 625 865L632 885Q635 897 624 897H524Q513 897 513 886Z" fill="url(#shoe)"/>
+    <path d="M372 888H484" stroke="#050505" stroke-width="8" stroke-linecap="round"/>
+    <path d="M516 888H628" stroke="#050505" stroke-width="8" stroke-linecap="round"/>
+    <path d="M386 866Q418 835 457 866" stroke="#18191a" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.48"/>
+    <path d="M543 866Q582 835 614 866" stroke="#18191a" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.48"/>
+  </g>
+
+  <!-- The neck is behind the jacket, so it cannot float over the collar. -->
+  <g id="head" data-layer="head">
+    <path d="M438 505V535Q438 552 500 554Q562 552 562 535V505Z" fill="url(#skin-ear)"/>
+    <ellipse cx="298" cy="343" rx="34" ry="42" fill="url(#skin-ear)"/>
+    <ellipse cx="702" cy="343" rx="34" ry="42" fill="url(#skin-ear)"/>
+    <rect x="313" y="140" width="374" height="378" rx="78" fill="url(#skin)"/>
+    <path d="M315 438Q319 493 379 514" stroke="#65251c" stroke-width="5" fill="none" opacity="0.18"/>
+  </g>
+
+  <g id="body" data-layer="body" filter="url(#soft-shadow)">
+    <!-- One jacket shell joins both sleeves and torso into a single shape. -->
+    <path d="M447 512H553Q586 514 620 532Q648 527 665 547Q676 559 674 579L669 712H610Q608 737 588 751H412Q392 737 390 712H331L326 579Q324 556 339 542Q356 526 380 533Q414 514 447 512Z" fill="url(#jacket)"/>
+    <path d="M435 516Q438 545 500 550Q562 545 565 516Z" fill="#24282a"/>
+
+    <!-- Hands begin beneath the cuffs; generous overlap removes all gaps. -->
+    <path d="M330 704H391V742Q391 773 361 778Q330 775 329 745Z" fill="url(#skin-ear)"/>
+    <path d="M609 704H670L671 745Q670 775 639 778Q609 773 609 742Z" fill="url(#skin-ear)"/>
+    <path d="M329 707Q359 711 391 708" stroke="#ffd000" stroke-width="7" fill="none"/>
+    <path d="M609 708Q641 711 671 707" stroke="#ffd000" stroke-width="7" fill="none"/>
+
+    <path d="M495 518H507V598Q507 607 500 607Q493 607 493 598V524Q493 518 495 518Z" fill="#ffd000"/>
+    <path d="M540 594H586Q592 594 592 600Q592 606 586 606H540Q534 606 534 600Q534 594 540 594Z" fill="#ffd000"/>
+    <path d="M392 719Q500 731 608 719" stroke="#1f2224" stroke-width="6" fill="none" opacity="0.52"/>
+    <path d="M393 690L426 651" stroke="#ffd000" stroke-width="11" stroke-linecap="round"/>
+    <path d="M607 690L574 651" stroke="#ffd000" stroke-width="11" stroke-linecap="round"/>
+  </g>
+
+  <g id="face" data-layer="face">
+    <path d="M414 255Q439 245 463 254" stroke="#252525" stroke-width="21" stroke-linecap="round"/>
+    <path d="M537 254Q561 245 586 255" stroke="#252525" stroke-width="21" stroke-linecap="round"/>
+    <ellipse cx="442" cy="338" rx="43" ry="61" fill="#fff" filter="url(#small-shadow)"/>
+    <ellipse cx="558" cy="338" rx="43" ry="61" fill="#fff" filter="url(#small-shadow)"/>
+    <path d="M455 315Q474 316 474 337V361Q474 381 455 382Q438 380 438 360V337Q438 318 455 315Z" fill="#242424"/>
+    <path d="M571 315Q590 316 590 337V361Q590 381 571 382Q554 380 554 360V337Q554 318 571 315Z" fill="#242424"/>
+    <path d="M452 316Q455 330 441 336" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+    <path d="M568 316Q571 330 557 336" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+    <path d="M500 375Q481 407 500 423Q519 407 500 375Z" fill="#6e241a" opacity="0.82"/>
+    <path d="M445 424Q463 454 500 455Q514 455 522 451" stroke="#67251c" stroke-width="12" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <g id="hair" data-layer="hair" filter="url(#small-shadow)">
+    <path d="M355 190Q344 149 370 116Q399 83 460 88H556Q591 88 597 77Q619 91 616 122Q613 155 586 174Q554 198 493 200H378Q360 200 355 190Z" fill="url(#hair)"/>
+    <path d="M576 170Q601 126 651 135Q690 143 681 219Q650 185 594 185Z" fill="url(#hair)"/>
+    <path d="M366 183Q430 195 494 185" stroke="#141414" stroke-width="5" fill="none" opacity="0.35"/>
+  </g>
+</svg>
